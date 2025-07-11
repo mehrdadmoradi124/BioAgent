@@ -1,0 +1,10 @@
+langchain
+langgraph
+openai
+tqdm
+biopython
+pubmedpy
+langchain_community
+transformers
+torch
+sentence-transformers
