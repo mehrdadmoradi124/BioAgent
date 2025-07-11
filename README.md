@@ -37,3 +37,46 @@ It's highly recommended to use a `conda` environment for dependency management:
 conda create -n biomed python=3.10
 conda activate biomed
 pip install -r requirements.txt
+```
+
+###  🔑 Set Your OpenAI API Key
+You need an OpenAI API key to run this project. Choose one of the following options:
+
+Option A – Set as environment variable (Recommended):
+```bash
+export OPENAI_API_KEY="your-openai-api-key"
+```
+
+Option B – Set directly in main.py (Not recommended for production):
+```bash
+import os
+os.environ["OPENAI_API_KEY"] = "your-openai-api-key"
+```
+### ▶️ Run the Agent Chain
+Once your environment is set up and your API key is configured, you can run the main script:
+```bash
+python main.py
+```
+You will then be prompted to enter a biomedical question. For example:
+
+What are treatments for glioblastoma resistant to temozolomide?
+
+## ✅ Example Output
+Here's a glimpse of the typical output you can expect when running the agent chain:
+
+🧠 Extracted Keywords: glioblastoma, temozolomide, resistance
+📄 Top 10 PubMed Papers fetched
+📚 Selected 5 Relevant Chunks
+✍️ Draft Answer:
+“Glioblastoma resistant to temozolomide can be treated with…”
+📎 Citations: [PMID:12345678], [PMID:98765432], …
+✅ Final Answer (Refined): …
+
+## 📌 Notes & Future Extensions
+This pipeline is designed to be extensible and can be adapted to other biomedical domains and integrated with different Large Language Models.
+
+For full offline deployment and greater control, consider replacing OpenAI with open-source models.
+
+## 📖 License
+This project is released under the MIT License. See the LICENSE file for more details.
+
