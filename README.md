@@ -1,19 +1,6 @@
----
-title: "biomed-qa: A Biomedical Question Answering Agent"
-author: "Your Name/Organization (Optional)"
-date: "`r Sys.Date()`"
-output:
-  github_document:
-    toc: true
-    toc_depth: 2
----
-
-[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 # 🔬 biomed-qa: A Biomedical Question Answering Agent
 
-Welcome to `biomed-qa`, a robust question answering system designed to provide concise, cited answers to biomedical questions by leveraging the power of large language models (LLMs) and PubMed. This project implements a multi-agent pipeline for efficient information retrieval and synthesis.
+Welcome to biomed-qa, a robust question answering system designed to provide concise, cited answers to biomedical questions by leveraging the power of large language models (LLMs) and PubMed. This project implements a multi-agent pipeline for efficient information retrieval and synthesis.
 
 ---
 
@@ -38,19 +25,15 @@ This system operates through a carefully orchestrated chain of specialized agent
 
 ---
 
-## 🗂️ File Structure
+## 🚀 How to Run
 
-The project is organized into a clear and intuitive directory structure:
+Follow these simple steps to set up and run the biomed-qa agent chain on your local machine.
 
-biomed-qa/
-├── agent1.py         # Keyword extractor
-├── agent2.py         # PubMed fetcher
-├── agent3.py         # RAG chunk retriever
-├── agent4.py         # Answer generator
-├── agent5.py         # Self-critic and refiner
-├── main.py           # Entry point to run the full pipeline
-├── requirements.txt  # Required Python packages
-└── README.md         # This file (generated from README.Rmd)
+### ⚙️ Create Environment
 
+It's highly recommended to use a `conda` environment for dependency management:
 
-
+```bash
+conda create -n biomed python=3.10
+conda activate biomed
+pip install -r requirements.txt
