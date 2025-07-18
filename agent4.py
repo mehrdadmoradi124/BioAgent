@@ -32,6 +32,6 @@ agent4 = create_react_agent(
     tools=[rerank_chunks],
     prompt="""
 Using the user question and the top-3 ranked chunks (already provided by the tool), 
-draft a concise answer with inline citations such as (Paper 1, Paper 2).
+draft a concise answer with inline citations such as (Paper ID1, Paper ID2).
 """
 )
